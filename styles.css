@@ -1,16 +1,22 @@
 .spoilerBlur {
-  -webkit-filter: blur(15px);
-  -moz-filter: blur(15px);
-  -o-filter: blur(15px);
-  -ms-filter: blur(15px);
-  filter: blur(15px);
+	transition-timing-function: cubic-bezier(0.445, 0.05, 0.55, 0.95);
+	transition-duration: 2s;
+	-webkit-filter: blur(15px);
+	-moz-filter: blur(15px);
+	-o-filter: blur(15px);
+	-ms-filter: blur(15px);
+	filter: blur(15px);
 }
 
 .spoilerBlur:hover {
-	transition-duration: 3s;
-	-webkit-filter: blur(0px);
-	-moz-filter: blur(0px);
-	-o-filter: blur(0px);
-	-ms-filter: blur(0px);
 	filter: blur(0px);
+}
+
+.spoilerBlur *:after {
+	transition-timing-function: cubic-bezier(0.55, 0.085, 0.68, 0.53);
+	transition-duration: 2s;
+}
+
+.spoilerBlur:not(:hover) .c-bout__pic span:after {
+	background-color: #3c3c3c;
 }
